@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2314CD248E06340092314D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314CC248E06340092314D /* CoreDataManager.swift */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2314CC248E06340092314D /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3C2314CB248E061B0092314D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				3C2314CC248E06340092314D /* CoreDataManager.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		848B8F9F248DD94400CD40D8 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		848B8FAA248DD94500CD40D8 /* Scale */ = {
 			isa = PBXGroup;
 			children = (
+				3C2314CB248E061B0092314D /* Core Data */,
 				3C2314C8248DDBEB0092314D /* Delegates */,
 				3C2314CA248DDC7D0092314D /* Controllers */,
 				3C2314C9248DDC2E0092314D /* Storyboards */,
@@ -168,6 +179,7 @@
 				848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */,
 				848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */,
 				848B8FB6248DD94500CD40D8 /* Scale.xcdatamodeld in Sources */,
+				3C2314CD248E06340092314D /* CoreDataManager.swift in Sources */,
 				848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
