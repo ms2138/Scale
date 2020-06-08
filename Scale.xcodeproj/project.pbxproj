@@ -48,6 +48,15 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		3C2314C9248DDC2E0092314D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				848B8FB1248DD94500CD40D8 /* Main.storyboard */,
+				848B8FB9248DD94700CD40D8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		848B8F9F248DD94400CD40D8 = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +78,8 @@
 			children = (
 				3C2314C8248DDBEB0092314D /* Delegates */,
 				848B8FAF248DD94500CD40D8 /* ViewController.swift */,
-				848B8FB1248DD94500CD40D8 /* Main.storyboard */,
+				3C2314C9248DDC2E0092314D /* Storyboards */,
 				848B8FB7248DD94700CD40D8 /* Assets.xcassets */,
-				848B8FB9248DD94700CD40D8 /* LaunchScreen.storyboard */,
 				848B8FBC248DD94700CD40D8 /* Info.plist */,
 				848B8FB4248DD94500CD40D8 /* Scale.xcdatamodeld */,
 			);
