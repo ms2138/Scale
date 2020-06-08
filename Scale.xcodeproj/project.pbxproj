@@ -39,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2314C8248DDBEB0092314D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				848B8FAB248DD94500CD40D8 /* AppDelegate.swift */,
+				848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		848B8F9F248DD94400CD40D8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +67,7 @@
 		848B8FAA248DD94500CD40D8 /* Scale */ = {
 			isa = PBXGroup;
 			children = (
-				848B8FAB248DD94500CD40D8 /* AppDelegate.swift */,
-				848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */,
+				3C2314C8248DDBEB0092314D /* Delegates */,
 				848B8FAF248DD94500CD40D8 /* ViewController.swift */,
 				848B8FB1248DD94500CD40D8 /* Main.storyboard */,
 				848B8FB7248DD94700CD40D8 /* Assets.xcassets */,
