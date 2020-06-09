@@ -33,4 +33,27 @@ class WeightCell: UITableViewCell {
 
         return label
     }()
+    private lazy var containerStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [dateLabel, weightLabel, horizontalStackView])
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(stackView)
+
+        return stackView
+    }()
+    private(set) lazy var dateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+
+        return label
+    }()
+    private(set) lazy var weightLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14.0)
+        label.textColor = .systemBlue
+
+        return label
+    }()
 }
