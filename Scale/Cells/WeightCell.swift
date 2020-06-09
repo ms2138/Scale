@@ -56,4 +56,17 @@ class WeightCell: UITableViewCell {
 
         return label
     }()
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        let margins = self.contentView.layoutMarginsGuide
+
+        NSLayoutConstraint.activate([
+            containerStackView.topAnchor.constraint(equalTo: margins.topAnchor),
+            containerStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            containerStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+        ])
+    }
 }
