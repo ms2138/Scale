@@ -9,5 +9,28 @@
 import UIKit
 
 class WeightCell: UITableViewCell {
+    private lazy var horizontalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [percentageLabel, numberOfDaysLabel])
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .equalSpacing
 
+        return stackView
+    }()
+    private(set) lazy var percentageLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 13.0)
+
+        return label
+    }()
+    private(set) lazy var numberOfDaysLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 13.0)
+        label.textColor = UIColor(red: 0.0/255.0,
+                                  green: 51.0/255.0,
+                                  blue: 51.0/255.0,
+                                  alpha: 1.0)
+
+        return label
+    }()
 }
