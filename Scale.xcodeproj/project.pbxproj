@@ -13,6 +13,7 @@
 		3C2314D5248E0B680092314D /* WeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314D4248E0B680092314D /* WeightCell.swift */; };
 		3C2314D7248F58400092314D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314D6248F58400092314D /* Record.swift */; };
 		3C2314DA2491F78A0092314D /* DTTableBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314D92491F78A0092314D /* DTTableBackgroundView.swift */; };
+		3C2314DD2491F7CF0092314D /* NoContentBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314DC2491F7CE0092314D /* NoContentBackgroundView.swift */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -29,6 +30,7 @@
 		3C2314D4248E0B680092314D /* WeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCell.swift; sourceTree = "<group>"; };
 		3C2314D6248F58400092314D /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		3C2314D92491F78A0092314D /* DTTableBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTableBackgroundView.swift; sourceTree = "<group>"; };
+		3C2314DC2491F7CE0092314D /* NoContentBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoContentBackgroundView.swift; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3C2314DE2491F7D60092314D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3C2314DC2491F7CE0092314D /* NoContentBackgroundView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		848B8F9F248DD94400CD40D8 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		848B8FAA248DD94500CD40D8 /* Scale */ = {
 			isa = PBXGroup;
 			children = (
+				3C2314DE2491F7D60092314D /* Protocols */,
 				3C2314DB2491F78E0092314D /* Views */,
 				3C2314D3248E0B3F0092314D /* Cells */,
 				3C2314CB248E061B0092314D /* Core Data */,
@@ -233,6 +244,7 @@
 				848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */,
 				3C2314D2248E0ABE0092314D /* Record+CoreDataProperties.swift in Sources */,
 				3C2314DA2491F78A0092314D /* DTTableBackgroundView.swift in Sources */,
+				3C2314DD2491F7CF0092314D /* NoContentBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
