@@ -163,6 +163,19 @@ extension WeightViewController: NSFetchedResultsControllerDelegate {
                 if let indexPath = indexPath {
                     tableView.deleteRows(at: [indexPath], with: .fade)
             }
+            case .update:
+                if let indexPath = indexPath {
+                    let cell = tableView.cellForRow(at: indexPath) as! WeightCell
+                    configureCell(cell, at: indexPath)
+            }
+            case .move:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+
+                if let newIndexPath = newIndexPath {
+                    tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
             default:
                 break
         }
