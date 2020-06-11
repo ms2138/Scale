@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 class WeightViewController: UIViewController, NoContentBackgroundView {
+    private let reuseIdentifier = "RecordCell"
+
     @IBOutlet weak var tableView: UITableView!
     let dataManager = CoreDataManager(modelName: "Scale")
     lazy var managedObjectContext: NSManagedObjectContext = {
@@ -60,6 +62,36 @@ extension WeightViewController {
         } catch {
             print("Failed to fetch items: \(error)")
         }
+    }
+}
+
+extension WeightViewController: UITableViewDataSource {
+    // MARK: Table View data source methods
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let sections = fetchedResultsController.sections else { return 0 }
+        return sections.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sections = fetchedResultsController.sections else { return 0 }
+
+        let sectionInfo = sections[section]
+        if sectionInfo.numberOfObjects == 0 {
+            showBackgroundView()
+            return 0
+        }
+
+        hideBackgroundView()
+        return sectionInfo.numberOfObjects
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! WeightCell
+
+        configureCell(cell, at: indexPath)
+
+        return cell
     }
 }
 
