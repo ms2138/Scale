@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class WeightViewController: UIViewController {
+class WeightViewController: UIViewController, NoContentBackgroundView {
     @IBOutlet weak var tableView: UITableView!
     let dataManager = CoreDataManager(modelName: "Scale")
     lazy var managedObjectContext: NSManagedObjectContext = {
@@ -26,9 +26,21 @@ class WeightViewController: UIViewController {
         fetchedResultsController.delegate = self
         return fetchedResultsController
     }()
+    lazy var backgroundView: DTTableBackgroundView = {
+        let backgroundView = DTTableBackgroundView(frame: self.view.frame)
+        backgroundView.messageLabel.text = "Please add a record"
+        backgroundView.buttonTitle = "Add"
+        backgroundView.handler = { [unowned self] in
+            self.performSegue(withIdentifier: "showAddWeight", sender: nil)
+        }
+        return backgroundView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.backgroundView = backgroundView
+        hideBackgroundView()
     }
 
 }
