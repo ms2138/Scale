@@ -63,6 +63,37 @@ extension WeightViewController {
     }
 }
 
+extension WeightViewController {
+    // MARK: Table view cell setup method
+
+    func configureCell(_ cell: WeightCell, at indexPath: IndexPath) {
+        let item = fetchedResultsController.object(at: indexPath)
+        guard let fetchedObjects = fetchedResultsController.fetchedObjects else { return }
+        let weightChangeBetweenDays = calculateWeightChange(for: item, at: indexPath)
+
+        cell.dateLabel.text = item.isDateToday() ? "Today" : item.createdAtString()
+        cell.percentageLabel.textColor = weightChangeBetweenDays < 0.0 ? UIColor.systemRed : UIColor.systemGreen
+        cell.weightLabel.text = "Weight - \(item.formattedWeight())"
+        cell.percentageLabel.text = String(format: "%.1f%%", weightChangeBetweenDays)
+        cell.numberOfDaysLabel.text = "Day \(fetchedObjects.count - indexPath.row)"
+    }
+}
+
+extension WeightViewController {
+    private func calculateWeightChange(for record: Record, at indexPath: IndexPath) -> Float {
+        var change = Float(0.0)
+        guard let fetchedObjects = fetchedResultsController.fetchedObjects else { return change }
+
+        if fetchedObjects.count > indexPath.row + 1 {
+            let newIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
+            let previousItem = fetchedResultsController.object(at: newIndexPath)
+            let previousWeight = previousItem.weight
+            change = ((record.weight - previousWeight) / previousWeight) * 100.0
+        }
+        return change
+    }
+}
+
 extension WeightViewController: NSFetchedResultsControllerDelegate {
     // MARK: NSFetchedResultsController delegate methods
 
