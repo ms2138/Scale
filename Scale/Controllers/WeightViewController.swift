@@ -39,10 +39,28 @@ class WeightViewController: UIViewController, NoContentBackgroundView {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Record"
+
         tableView.backgroundView = backgroundView
         hideBackgroundView()
     }
 
+}
+
+extension WeightViewController {
+    // MARK: Core Data management methods
+
+    @objc func save() {
+        dataManager.saveContext()
+    }
+
+    private func fetch() {
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch {
+            print("Failed to fetch items: \(error)")
+        }
+    }
 }
 
 extension WeightViewController: NSFetchedResultsControllerDelegate {
