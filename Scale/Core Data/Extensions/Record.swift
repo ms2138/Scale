@@ -15,6 +15,12 @@ extension Record {
         return dateFormatter.string(from: createdAt)
     }
 
+    func createdAtString(dateFormat: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        return dateFormatter.string(from: createdAt)
+    }
+
     func isDateToday() -> Bool {
         return Calendar.current.isDateInToday(createdAt)
     }
