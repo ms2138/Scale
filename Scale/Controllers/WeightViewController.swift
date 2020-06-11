@@ -11,7 +11,7 @@ import CoreData
 
 class WeightViewController: UIViewController, NoContentBackgroundView {
     private let reuseIdentifier = "RecordCell"
-
+    
     @IBOutlet weak var tableView: UITableView!
     let dataManager = CoreDataManager(modelName: "Scale")
     lazy var managedObjectContext: NSManagedObjectContext = {
@@ -92,6 +92,18 @@ extension WeightViewController: UITableViewDataSource {
         configureCell(cell, at: indexPath)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+
+        let item = fetchedResultsController.object(at: indexPath)
+
+        managedObjectContext.delete(item)
     }
 }
 
