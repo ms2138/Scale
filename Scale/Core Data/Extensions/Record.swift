@@ -14,4 +14,12 @@ extension Record {
         dateFormatter.dateStyle = .full
         return dateFormatter.string(from: createdAt)
     }
+
+    func isDateToday() -> Bool {
+        return Calendar.current.isDateInToday(createdAt)
+    }
+
+    func formattedWeight() -> String {
+        String(format: "%.0flbs", weight)
+    }
 }
