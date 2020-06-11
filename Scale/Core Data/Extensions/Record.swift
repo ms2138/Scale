@@ -9,5 +9,9 @@
 import Foundation
 
 extension Record {
-
+    func createdAtString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        return dateFormatter.string(from: createdAt)
+    }
 }
