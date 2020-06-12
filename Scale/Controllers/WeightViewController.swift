@@ -45,6 +45,8 @@ class WeightViewController: UIViewController, NoContentBackgroundView {
 
         tableView.backgroundView = backgroundView
         hideBackgroundView()
+
+        fetch()
     }
 
 }
