@@ -16,6 +16,7 @@
 		3C2314DD2491F7CF0092314D /* NoContentBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314DC2491F7CE0092314D /* NoContentBackgroundView.swift */; };
 		3C2314E02494A9B50092314D /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314DF2494A9B50092314D /* AddWeightViewController.swift */; };
 		3C2314E22494AA540092314D /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314E12494AA540092314D /* TextInputCell.swift */; };
+		3C2314E42494AA840092314D /* AddWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2314E32494AA840092314D /* AddWeight.storyboard */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -35,6 +36,7 @@
 		3C2314DC2491F7CE0092314D /* NoContentBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoContentBackgroundView.swift; sourceTree = "<group>"; };
 		3C2314DF2494A9B50092314D /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
 		3C2314E12494AA540092314D /* TextInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
+		3C2314E32494AA840092314D /* AddWeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWeight.storyboard; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				848B8FB1248DD94500CD40D8 /* Main.storyboard */,
 				848B8FB9248DD94700CD40D8 /* LaunchScreen.storyboard */,
+				3C2314E32494AA840092314D /* AddWeight.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2314E42494AA840092314D /* AddWeight.storyboard in Resources */,
 				848B8FBB248DD94700CD40D8 /* LaunchScreen.storyboard in Resources */,
 				848B8FB8248DD94700CD40D8 /* Assets.xcassets in Resources */,
 				848B8FB3248DD94500CD40D8 /* Main.storyboard in Resources */,
