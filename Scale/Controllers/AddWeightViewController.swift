@@ -10,6 +10,7 @@ import UIKit
 
 class AddWeightViewController: UITableViewController {
     @IBOutlet weak var weightCell: TextInputCell!
+    @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
