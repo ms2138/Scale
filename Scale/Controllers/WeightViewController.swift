@@ -183,3 +183,19 @@ extension WeightViewController: NSFetchedResultsControllerDelegate {
         }
     }
 }
+
+extension WeightViewController {
+    // MARK: - Segue methods
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showAddWeight":
+                let navController = segue.destination as! UINavigationController
+                guard let viewController = navController.topViewController else { return }
+                let vc = viewController as! AddWeightViewController
+                vc.managedObjectContext = self.managedObjectContext
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+}
