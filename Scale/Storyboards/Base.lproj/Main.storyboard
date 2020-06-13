@@ -39,7 +39,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FEG-3j-r4u"/>
+                    <navigationItem key="navigationItem" id="FEG-3j-r4u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WgP-Um-fEb">
+                            <connections>
+                                <segue destination="Ujb-Fy-DZb" kind="presentation" identifier="showAddWeight" id="5ya-a6-uuV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Ebe-Mx-WUi" id="dAp-DR-9VM"/>
                     </connections>
@@ -65,6 +71,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KG6-a8-hlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--AddWeight-->
+        <scene sceneID="Zqf-lS-VNw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddWeight" id="Ujb-Fy-DZb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kd3-dP-Z8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="10"/>
         </scene>
     </scenes>
 </document>
