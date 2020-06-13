@@ -33,8 +33,12 @@
                             <outlet property="delegate" destination="GwS-65-Zca" id="4t1-dY-ayN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Z49-ef-6En"/>
+                    <navigationItem key="navigationItem" id="Z49-ef-6En">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HZw-Lk-geZ"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="wqB-S0-c9g"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="saveBarButtonItem" destination="wqB-S0-c9g" id="gG5-d6-oWL"/>
                         <outlet property="weightCell" destination="DaR-fx-dw0" id="Y0e-3U-O9W"/>
                     </connections>
                 </tableViewController>
