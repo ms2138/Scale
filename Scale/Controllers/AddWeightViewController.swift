@@ -19,3 +19,26 @@ class AddWeightViewController: UITableViewController {
     }
 
 }
+
+extension AddWeightViewController {
+    // MARK: - IBAction methods
+
+    @IBAction func cancel(_ sender: UIBarButtonItem?) {
+        dismiss(animated: true)
+    }
+
+    @IBAction func save(_ sender: UIBarButtonItem?) {
+        guard let input = Float(weightCell.textField.text!) else {
+            showAlert(title: "Error", message: "Please enter the required information")
+            return
+        }
+
+        guard let managedObjectContext = managedObjectContext else { return }
+
+        let record = Record(context: managedObjectContext)
+        record.weight = input
+        record.createdAt = Date()
+
+        dismiss(animated: true)
+    }
+}
