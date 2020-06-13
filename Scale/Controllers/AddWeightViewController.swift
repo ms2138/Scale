@@ -16,6 +16,8 @@ class AddWeightViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Add Weight"
     }
 
     override func viewWillAppear(_ animated: Bool) {
