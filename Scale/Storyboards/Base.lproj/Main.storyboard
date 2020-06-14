@@ -52,7 +52,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Ebe-Mx-WUi" id="dAp-DR-9VM"/>
-                        <segue destination="Wmb-6w-38d" kind="presentation" id="kZs-UW-T4x"/>
+                        <segue destination="Wmb-6w-38d" kind="presentation" identifier="showEditDatePicker" id="kZs-UW-T4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
