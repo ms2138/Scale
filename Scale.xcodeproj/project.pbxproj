@@ -23,6 +23,7 @@
 		3C2314ED2495C66D0092314D /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2314EC2495C66D0092314D /* DatePicker.storyboard */; };
 		3C2314EF2495FBE90092314D /* WeightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314EE2495FBE90092314D /* WeightDetailsViewController.swift */; };
 		3C2314F12495FD670092314D /* WeightDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2314F02495FD670092314D /* WeightDetails.storyboard */; };
+		3C2314F32496C8ED0092314D /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314F22496C8ED0092314D /* GraphViewController.swift */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -49,6 +50,7 @@
 		3C2314EC2495C66D0092314D /* DatePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
 		3C2314EE2495FBE90092314D /* WeightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDetailsViewController.swift; sourceTree = "<group>"; };
 		3C2314F02495FD670092314D /* WeightDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeightDetails.storyboard; sourceTree = "<group>"; };
+		3C2314F22496C8ED0092314D /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				848B8FAF248DD94500CD40D8 /* WeightViewController.swift */,
 				3C2314DF2494A9B50092314D /* AddWeightViewController.swift */,
 				3C2314EE2495FBE90092314D /* WeightDetailsViewController.swift */,
+				3C2314F22496C8ED0092314D /* GraphViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				3C2314D5248E0B680092314D /* WeightCell.swift in Sources */,
 				3C2314EB2495C5870092314D /* DateCell.swift in Sources */,
 				848B8FB6248DD94500CD40D8 /* Scale.xcdatamodeld in Sources */,
+				3C2314F32496C8ED0092314D /* GraphViewController.swift in Sources */,
 				3C2314CD248E06340092314D /* CoreDataManager.swift in Sources */,
 				848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */,
 				3C2314EF2495FBE90092314D /* WeightDetailsViewController.swift in Sources */,
