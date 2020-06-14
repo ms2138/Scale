@@ -33,9 +33,21 @@
                             <outlet property="delegate" destination="vaD-os-gMU" id="2ex-tr-3YA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="x5Y-2X-A0P"/>
+                    <navigationItem key="navigationItem" id="x5Y-2X-A0P">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tiT-wZ-rt1">
+                            <connections>
+                                <action selector="cancel:" destination="vaD-os-gMU" id="RmE-vb-6nW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="aY0-Tw-wbE">
+                            <connections>
+                                <action selector="save:" destination="vaD-os-gMU" id="ziW-va-aIU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateCell" destination="atl-BK-Nv8" id="SJd-Gg-LQS"/>
+                        <outlet property="saveBarButtonItem" destination="aY0-Tw-wbE" id="19Q-NS-Q7b"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAw-iT-fjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
