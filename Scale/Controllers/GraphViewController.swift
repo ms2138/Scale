@@ -15,5 +15,7 @@ class GraphViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Graph"
     }
 }
