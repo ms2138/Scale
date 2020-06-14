@@ -29,9 +29,7 @@ class DatePickerViewController: UITableViewController {
 
 extension DatePickerViewController {
     @objc func dateChanged(_ sender: UIDatePicker) {
-        if let currentDate = currentDate {
-            saveBarButtonItem.isEnabled = currentDate != sender.date
-        }
+        saveBarButtonItem.isEnabled = !Calendar.current.isDateInToday(sender.date)
     }
 }
 
