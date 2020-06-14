@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="Az1-0x-yc4">
             <objects>
-                <viewController id="4VV-qd-RtX" sceneMemberID="viewController">
+                <viewController id="4VV-qd-RtX" customClass="GraphViewController" customModule="Scale" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="km4-Vn-AwE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gyX-t8-zli"/>
                     </view>
+                    <connections>
+                        <outlet property="hostView" destination="dlK-lR-jzJ" id="RFK-RA-Fjr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w76-GC-daU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
