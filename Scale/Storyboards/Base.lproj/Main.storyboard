@@ -52,6 +52,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Ebe-Mx-WUi" id="dAp-DR-9VM"/>
+                        <segue destination="Wmb-6w-38d" kind="presentation" id="kZs-UW-T4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,6 +84,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd3-dP-Z8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1922" y="10"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="1Xa-0A-hhS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DatePicker" id="Wmb-6w-38d" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wv-EW-ESX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="259"/>
         </scene>
     </scenes>
 </document>
