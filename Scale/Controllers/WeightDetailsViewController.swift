@@ -18,6 +18,25 @@ class WeightDetailsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Details"
+
+        setupCells()
     }
 
+}
+
+extension WeightDetailsViewController {
+    // MARK: - Setup methods
+    
+    private func setupCells() {
+        if let weight = weight,
+            let overallChange = overallChange,
+            let date = date {
+            overallChangeCell.detailTextLabel?.textColor = overallChange < 0.0 ? UIColor.systemRed : UIColor.systemGreen
+            dateDescriptionCell.detailTextLabel?.text = date
+            weightDescriptionCell.detailTextLabel?.text = weight
+            overallChangeCell.detailTextLabel?.text = String(format: "%.1f%%", overallChange)
+        }
+    }
 }
