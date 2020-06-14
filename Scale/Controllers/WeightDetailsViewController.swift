@@ -15,6 +15,7 @@ class WeightDetailsViewController: UITableViewController {
     var weight: String?
     var overallChange: Float?
     var date: String?
+    var fetchedObjects: [Record]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
