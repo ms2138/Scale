@@ -49,6 +49,8 @@ class WeightViewController: UIViewController, NoContentBackgroundView {
         hideBackgroundView()
 
         fetch()
+
+        setupNotifications()
     }
 
 }
@@ -60,6 +62,21 @@ extension WeightViewController {
         super.setEditing(editing, animated: animated)
 
         tableView.setEditing(editing, animated: animated)
+    }
+}
+
+extension WeightViewController {
+    // MARK: Notification methods
+
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(save),
+                                               name: UIApplication.willTerminateNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(save),
+                                               name: UIApplication.didEnterBackgroundNotification,
+                                               object: nil)
     }
 }
 
