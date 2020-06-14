@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CorePlot
 
 class GraphViewController: UIViewController {
+    @IBOutlet weak var hostView: CPTGraphHostingView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
