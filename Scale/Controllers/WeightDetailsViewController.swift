@@ -9,6 +9,10 @@
 import UIKit
 
 class WeightDetailsViewController: UITableViewController {
+    @IBOutlet weak var dateDescriptionCell: UITableViewCell!
+    @IBOutlet weak var weightDescriptionCell: UITableViewCell!
+    @IBOutlet weak var overallChangeCell: UITableViewCell!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
