@@ -106,6 +106,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Show Graph"/>
+                                                    <connections>
+                                                        <segue destination="TCr-oV-opO" kind="show" identifier="showGraph" id="en4-cH-ju8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -133,6 +136,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYZ-Q5-34O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141" y="125"/>
+        </scene>
+        <!--Graph-->
+        <scene sceneID="9MX-al-paP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Graph" id="TCr-oV-opO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZUd-XZ-MYN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lds-PH-s4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="125"/>
         </scene>
     </scenes>
 </document>
