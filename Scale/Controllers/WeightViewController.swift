@@ -43,12 +43,24 @@ class WeightViewController: UIViewController, NoContentBackgroundView {
 
         title = "Record"
 
+        navigationItem.leftBarButtonItem = editButtonItem
+
         tableView.backgroundView = backgroundView
         hideBackgroundView()
 
         fetch()
     }
 
+}
+
+extension WeightViewController {
+    // MARK: Editing methods
+
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+
+        tableView.setEditing(editing, animated: animated)
+    }
 }
 
 extension WeightViewController {
