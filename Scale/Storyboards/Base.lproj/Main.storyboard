@@ -26,6 +26,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="X2h-v3-trL" kind="show" identifier="showWeightDetails" id="q54-MS-wXe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -84,6 +87,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd3-dP-Z8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1922" y="10"/>
+        </scene>
+        <!--WeightDetails-->
+        <scene sceneID="HWw-P1-ycV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WeightDetails" id="X2h-v3-trL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gDy-9t-7wV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pA-yN-UEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="143"/>
         </scene>
         <!--DatePicker-->
         <scene sceneID="1Xa-0A-hhS">
