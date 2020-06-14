@@ -41,3 +41,18 @@ extension WeightDetailsViewController {
         }
     }
 }
+
+extension WeightDetailsViewController {
+    // MARK: - Segue methods
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showGraph":
+                let viewController = segue.destination
+                let vc = viewController as! GraphViewController
+                vc.graphData = fetchedObjects?.reversed()
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+}
