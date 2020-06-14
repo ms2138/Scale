@@ -96,6 +96,17 @@ extension WeightViewController {
     }
 }
 
+extension WeightViewController: UITableViewDelegate {
+    // MARK: Table View delegate methods
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isEditing {
+            performSegue(withIdentifier: "showEditDatePicker", sender: self)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
 extension WeightViewController: UITableViewDataSource {
     // MARK: Table View data source methods
 
@@ -223,8 +234,23 @@ extension WeightViewController {
                 guard let viewController = navController.topViewController else { return }
                 let vc = viewController as! AddWeightViewController
                 vc.managedObjectContext = self.managedObjectContext
+            case "showEditDatePicker":
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let navController = segue.destination as! UINavigationController
+                    guard let viewController = navController.topViewController else { return }
+                    let vc = viewController as! DatePickerViewController
+                    let record = fetchedResultsController.object(at: indexPath)
+                    vc.currentDate = record.createdAt
+                    vc.dateChangedHandler = { date in
+                        record.createdAt = date
+                    }
+            }
             default:
                 preconditionFailure("Segue identifier did not match")
         }
+    }
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !isEditing
     }
 }
