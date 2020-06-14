@@ -91,6 +91,33 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="fb9-SY-XpJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="NOK-uc-9Jy">
+                                        <rect key="frame" x="0.0" y="184.5" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NOK-uc-9Jy" id="2K4-xS-OSp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuK-7R-i4u">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Show Graph"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nuK-7R-i4u" firstAttribute="top" secondItem="2K4-xS-OSp" secondAttribute="top" id="cAj-rf-qiW"/>
+                                                <constraint firstItem="nuK-7R-i4u" firstAttribute="leading" secondItem="2K4-xS-OSp" secondAttribute="leading" id="eeJ-5C-cfs"/>
+                                                <constraint firstAttribute="bottom" secondItem="nuK-7R-i4u" secondAttribute="bottom" id="j5t-Ny-8Eg"/>
+                                                <constraint firstAttribute="trailing" secondItem="nuK-7R-i4u" secondAttribute="trailing" id="kaY-Ma-m80"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="CBf-dZ-gPw" id="UIt-Wq-gSe"/>
