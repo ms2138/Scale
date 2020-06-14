@@ -245,6 +245,15 @@ extension WeightViewController {
                         record.createdAt = date
                     }
             }
+            case "showWeightDetails":
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let item = fetchedResultsController.object(at: indexPath)
+                    let vc = segue.destination as! WeightDetailsViewController
+                    vc.weight = item.formattedWeight()
+                    vc.overallChange = calculateWeightChange(for: item, at: indexPath)
+                    vc.date = item.createdAtString()
+                    vc.fetchedObjects = fetchedResultsController.fetchedObjects
+            }
             default:
                 preconditionFailure("Segue identifier did not match")
         }
