@@ -20,6 +20,7 @@
 		3C2314E62494AD640092314D /* UIViewController+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314E52494AD640092314D /* UIViewController+EXT.swift */; };
 		3C2314E92495C56C0092314D /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314E82495C56C0092314D /* DatePickerViewController.swift */; };
 		3C2314EB2495C5870092314D /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314EA2495C5870092314D /* DateCell.swift */; };
+		3C2314ED2495C66D0092314D /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2314EC2495C66D0092314D /* DatePicker.storyboard */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -43,6 +44,7 @@
 		3C2314E52494AD640092314D /* UIViewController+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+EXT.swift"; sourceTree = "<group>"; };
 		3C2314E82495C56C0092314D /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		3C2314EA2495C5870092314D /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		3C2314EC2495C66D0092314D /* DatePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				848B8FB1248DD94500CD40D8 /* Main.storyboard */,
 				848B8FB9248DD94700CD40D8 /* LaunchScreen.storyboard */,
 				3C2314E32494AA840092314D /* AddWeight.storyboard */,
+				3C2314EC2495C66D0092314D /* DatePicker.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				848B8FBB248DD94700CD40D8 /* LaunchScreen.storyboard in Resources */,
 				848B8FB8248DD94700CD40D8 /* Assets.xcassets in Resources */,
 				848B8FB3248DD94500CD40D8 /* Main.storyboard in Resources */,
+				3C2314ED2495C66D0092314D /* DatePicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
