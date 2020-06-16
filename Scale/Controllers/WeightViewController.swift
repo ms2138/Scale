@@ -18,7 +18,7 @@ class WeightViewController: UIViewController, NoContentBackgroundView {
         return self.dataManager.managedObjectContext
     }()
     lazy var fetchedResultsController: NSFetchedResultsController<Record> = {
-        let fetchRequest = NSFetchRequest<Record>(entityName: "Record")
+        let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
