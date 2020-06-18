@@ -51,7 +51,7 @@ extension WeightDetailsViewController {
             case "showGraph":
                 let viewController = segue.destination
                 let vc = viewController as! GraphViewController
-                vc.graphData = fetchedObjects?.reversed()
+                vc.managedObjectContext = managedObjectContext
             default:
                 preconditionFailure("Segue identifier did not match")
         }
