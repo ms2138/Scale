@@ -26,6 +26,7 @@
 		3C2314F32496C8ED0092314D /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2314F22496C8ED0092314D /* GraphViewController.swift */; };
 		3C2314F52496C9110092314D /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2314F42496C9110092314D /* Graph.storyboard */; };
 		3C8867CC249B14A70014E0C6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8867CB249B14A70014E0C6 /* SettingsViewController.swift */; };
+		3C8867CE249B15DE0014E0C6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8867CD249B15DE0014E0C6 /* Settings.storyboard */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -56,6 +57,7 @@
 		3C2314F22496C8ED0092314D /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		3C2314F42496C9110092314D /* Graph.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graph.storyboard; sourceTree = "<group>"; };
 		3C8867CB249B14A70014E0C6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3C8867CD249B15DE0014E0C6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				3C2314EC2495C66D0092314D /* DatePicker.storyboard */,
 				3C2314F02495FD670092314D /* WeightDetails.storyboard */,
 				3C2314F42496C9110092314D /* Graph.storyboard */,
+				3C8867CD249B15DE0014E0C6 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				3C2314E42494AA840092314D /* AddWeight.storyboard in Resources */,
 				848B8FBB248DD94700CD40D8 /* LaunchScreen.storyboard in Resources */,
 				848B8FB8248DD94700CD40D8 /* Assets.xcassets in Resources */,
+				3C8867CE249B15DE0014E0C6 /* Settings.storyboard in Resources */,
 				3C2314F52496C9110092314D /* Graph.storyboard in Resources */,
 				3C2314F12495FD670092314D /* WeightDetails.storyboard in Resources */,
 				848B8FB3248DD94500CD40D8 /* Main.storyboard in Resources */,
