@@ -8,10 +8,12 @@
 
 import UIKit
 import CorePlot
+import CoreData
 
 class GraphViewController: UIViewController {
     @IBOutlet weak var hostView: CPTGraphHostingView!
-    var graphData: [Record]?
+    var managedObjectContext: NSManagedObjectContext?
+    private var graphData: [Record]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,7 @@ class GraphViewController: UIViewController {
         initGraph()
         initScatterPlot()
         setupAxis()
+        setupGraphData()
 
         configurePlotSpace()
     }
@@ -113,18 +116,38 @@ private extension GraphViewController {
         }
     }
 
+    func setupGraphData() {
+        guard let context = managedObjectContext else { return }
+        let fetchRequest:NSFetchRequest<Record> = Record.fetchRequest()
+        let sortByCreatedAt = NSSortDescriptor(key: "createdAt", ascending: true)
+        fetchRequest.sortDescriptors = [sortByCreatedAt]
+        do {
+            graphData = try context.fetch(fetchRequest)
+        } catch {
+            print("Failed to perform fetch request: \(error)")
+        }
+    }
+
     func configurePlotSpace() {
         guard let graph = hostView.hostedGraph else { return }
-        guard let graphData = graphData else { return }
-        
-        let xMin = 1.0
-        let xMax = Double(graphData.count)
-        let yMin = Double(graphData[graphData.count - 1].weight) / 2
-        let yMax = Double(graphData[graphData.count - 1].weight)
+        guard let context = managedObjectContext else { return }
+        let fetchRequest:NSFetchRequest<Record> = Record.fetchRequest()
+        let sortByWeight = NSSortDescriptor(key: "weight", ascending: true)
+        fetchRequest.sortDescriptors = [sortByWeight]
+        do {
+            let weightData = try context.fetch(fetchRequest)
 
-        guard let plotSpace = graph.defaultPlotSpace as? CPTXYPlotSpace else { return }
-        plotSpace.xRange = CPTPlotRange(locationDecimal: CPTDecimalFromDouble(xMin), lengthDecimal: CPTDecimalFromDouble(xMax))
-        plotSpace.yRange = CPTPlotRange(locationDecimal: CPTDecimalFromDouble(yMin), lengthDecimal: CPTDecimalFromDouble(yMax))
+            let xMin = 1.0
+            let xMax = Double(weightData.count)
+            let yMin = Double(weightData[0].weight / 2)
+            let yMax = Double(weightData[weightData.count - 1].weight)
+
+            guard let plotSpace = graph.defaultPlotSpace as? CPTXYPlotSpace else { return }
+            plotSpace.xRange = CPTPlotRange(locationDecimal: CPTDecimalFromDouble(xMin), lengthDecimal: CPTDecimalFromDouble(xMax))
+            plotSpace.yRange = CPTPlotRange(locationDecimal: CPTDecimalFromDouble(yMin), lengthDecimal: CPTDecimalFromDouble(yMax))
+        } catch {
+            print("Failed to perform fetch request: \(error)")
+        }
     }
 }
 
