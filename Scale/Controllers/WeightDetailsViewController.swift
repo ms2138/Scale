@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class WeightDetailsViewController: UITableViewController {
     @IBOutlet weak var dateDescriptionCell: UITableViewCell!
@@ -15,7 +16,7 @@ class WeightDetailsViewController: UITableViewController {
     var weight: String?
     var overallChange: Float?
     var date: String?
-    var fetchedObjects: [Record]?
+    var managedObjectContext: NSManagedObjectContext?
 
     override func viewDidLoad() {
         super.viewDidLoad()

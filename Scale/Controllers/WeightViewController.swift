@@ -252,7 +252,7 @@ extension WeightViewController {
                     vc.weight = item.formattedWeight()
                     vc.overallChange = calculateWeightChange(for: item, at: indexPath)
                     vc.date = item.createdAtString()
-                    vc.fetchedObjects = fetchedResultsController.fetchedObjects
+                    vc.managedObjectContext = managedObjectContext
             }
             default:
                 preconditionFailure("Segue identifier did not match")
