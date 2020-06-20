@@ -60,16 +60,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="krk-jl-cN1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMb-j3-JdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134.7826086956522" y="83.705357142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="Sfd-2k-e6z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HOn-9L-nLI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="3j1-Qa-qOy"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7oD-1S-csH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
