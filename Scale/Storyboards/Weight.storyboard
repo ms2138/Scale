@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oY9-JU-VJD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weight View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeightViewController" customModule="Scale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ebe-Mx-WUi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecordCell" id="Xwd-Tm-kNX" customClass="WeightCell" customModule="Scale" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xwd-Tm-kNX" id="r8U-Ge-9tK">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="X2h-v3-trL" kind="show" identifier="showWeightDetails" id="q54-MS-wXe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fvx-uv-phC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MXe-wH-F1m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ebe-Mx-WUi" secondAttribute="trailing" id="0YA-px-KsS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ebe-Mx-WUi" secondAttribute="bottom" id="1K8-5L-UlZ"/>
+                            <constraint firstItem="Ebe-Mx-WUi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2yZ-XF-Y8s"/>
+                            <constraint firstItem="Ebe-Mx-WUi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ecc-WG-zzw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FEG-3j-r4u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WgP-Um-fEb">
+                            <connections>
+                                <segue destination="Ujb-Fy-DZb" kind="presentation" identifier="showAddWeight" id="5ya-a6-uuV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Ebe-Mx-WUi" id="dAp-DR-9VM"/>
+                        <segue destination="Wmb-6w-38d" kind="presentation" identifier="showEditDatePicker" id="kZs-UW-T4x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
+        </scene>
+        <!--Records-->
+        <scene sceneID="vqM-BB-Szc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oY9-JU-VJD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Records" id="wj0-Pr-AVP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bit-ea-aLQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="04Y-Qg-Ltz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KG6-a8-hlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--AddWeight-->
+        <scene sceneID="Zqf-lS-VNw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddWeight" id="Ujb-Fy-DZb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kd3-dP-Z8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831.1594202898555" y="9.375"/>
+        </scene>
+        <!--WeightDetails-->
+        <scene sceneID="HWw-P1-ycV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WeightDetails" id="X2h-v3-trL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gDy-9t-7wV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pA-yN-UEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844" y="139"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="1Xa-0A-hhS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DatePicker" id="Wmb-6w-38d" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wv-EW-ESX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828.985507246377" y="258.48214285714283"/>
+        </scene>
+    </scenes>
+</document>
