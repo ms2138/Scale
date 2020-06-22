@@ -31,6 +31,7 @@ extension SettingsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         resetCellsAccessoryType()
 
+        updateUnitOfWeight(to: indexPath.row == 0 ? .pounds : .kilograms)
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -43,5 +44,11 @@ private extension SettingsViewController {
                 cell.accessoryType = .none
             }
         }
+    }
+
+    func updateUnitOfWeight(to unit: UnitOfWeight) {
+        let defaults = UserDefaults.standard
+        defaults.set(unit.rawValue, forKey: kUnitOfWeightKey)
+        defaults.synchronize()
     }
 }
