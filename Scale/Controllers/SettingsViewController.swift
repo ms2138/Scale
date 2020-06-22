@@ -8,11 +8,22 @@
 
 import UIKit
 
+enum UnitOfWeight: Int {
+    case pounds, kilograms
+}
+
 class SettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Settings"
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+        let index = UserDefaults.standard.integer(forKey: kUnitOfWeightKey)
+        tableView.cellForRow(at: IndexPath(row: index, section: 0))?.accessoryType = .checkmark
     }
 }
 
