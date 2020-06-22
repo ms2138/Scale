@@ -32,6 +32,13 @@ extension Record {
     }
 
     func formattedWeight() -> String {
-        String(format: "%.0flbs", weight)
+        let defaults = UserDefaults.standard
+        let unitOfWeight = UnitOfWeight(rawValue: defaults.integer(forKey: kUnitOfWeightKey)) ?? UnitOfWeight.pounds
+        switch unitOfWeight {
+            case .pounds:
+                return String(format: "%.0flbs", weight)
+            case .kilograms:
+                return String(format: "%.0fkg", weight)
+        }
     }
 }
