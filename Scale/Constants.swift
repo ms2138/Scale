@@ -9,3 +9,4 @@
 import Foundation
 
 let kFirstTimeLaunchKey = "FirstTimeLaunch"
+let kUnitOfWeightKey = "UnitOfWeight"
