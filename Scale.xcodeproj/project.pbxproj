@@ -27,6 +27,7 @@
 		3C2314F52496C9110092314D /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2314F42496C9110092314D /* Graph.storyboard */; };
 		3C8867CC249B14A70014E0C6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8867CB249B14A70014E0C6 /* SettingsViewController.swift */; };
 		3C8867CE249B15DE0014E0C6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8867CD249B15DE0014E0C6 /* Settings.storyboard */; };
+		3C99337024A047AA00E07616 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C99336F24A047AA00E07616 /* Constants.swift */; };
 		848B8FAC248DD94500CD40D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAB248DD94500CD40D8 /* AppDelegate.swift */; };
 		848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */; };
 		848B8FB0248DD94500CD40D8 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B8FAF248DD94500CD40D8 /* WeightViewController.swift */; };
@@ -58,6 +59,7 @@
 		3C2314F42496C9110092314D /* Graph.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graph.storyboard; sourceTree = "<group>"; };
 		3C8867CB249B14A70014E0C6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3C8867CD249B15DE0014E0C6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		3C99336F24A047AA00E07616 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		848B8FA8248DD94400CD40D8 /* Scale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B8FAB248DD94500CD40D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B8FAD248DD94500CD40D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		848B8FAA248DD94500CD40D8 /* Scale */ = {
 			isa = PBXGroup;
 			children = (
+				3C99336F24A047AA00E07616 /* Constants.swift */,
 				3C2314E72494AD670092314D /* Extensions */,
 				3C2314DE2491F7D60092314D /* Protocols */,
 				3C2314DB2491F78E0092314D /* Views */,
@@ -369,6 +372,7 @@
 				848B8FAE248DD94500CD40D8 /* SceneDelegate.swift in Sources */,
 				3C2314EF2495FBE90092314D /* WeightDetailsViewController.swift in Sources */,
 				3C2314E02494A9B50092314D /* AddWeightViewController.swift in Sources */,
+				3C99337024A047AA00E07616 /* Constants.swift in Sources */,
 				3C2314E92495C56C0092314D /* DatePickerViewController.swift in Sources */,
 				3C2314D2248E0ABE0092314D /* Record+CoreDataProperties.swift in Sources */,
 				3C2314DA2491F78A0092314D /* DTTableBackgroundView.swift in Sources */,
