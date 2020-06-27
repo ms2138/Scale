@@ -8,5 +8,7 @@
 
 import Foundation
 
-let kFirstTimeLaunchKey = "FirstTimeLaunch"
-let kUnitOfWeightKey = "UnitOfWeight"
+struct Constants {
+    static let firstTimeLaunched = "FirstTimeLaunched"
+    static let unitOfWeight = "UnitOfWeight"
+}
