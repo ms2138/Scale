@@ -13,9 +13,8 @@ class WeightDetailsViewController: UITableViewController {
     @IBOutlet weak var dateDescriptionCell: UITableViewCell!
     @IBOutlet weak var weightDescriptionCell: UITableViewCell!
     @IBOutlet weak var overallChangeCell: UITableViewCell!
-    var weight: String?
+    var record: Record?
     var overallChange: Float?
-    var date: String?
     var managedObjectContext: NSManagedObjectContext?
 
     override func viewDidLoad() {
@@ -32,12 +31,13 @@ extension WeightDetailsViewController {
     // MARK: - Setup methods
     
     private func setupCells() {
-        if let weight = weight,
-            let overallChange = overallChange,
-            let date = date {
+        if let overallChange = overallChange,
+            let record = record {
+            let unitOfWeight = AppDefaults().unitOfWeight
+
             overallChangeCell.detailTextLabel?.textColor = overallChange < 0.0 ? UIColor.systemRed : UIColor.systemGreen
-            dateDescriptionCell.detailTextLabel?.text = date
-            weightDescriptionCell.detailTextLabel?.text = weight
+            dateDescriptionCell.detailTextLabel?.text = record.createdAtString()
+            weightDescriptionCell.detailTextLabel?.text = record.formatWeight(for: unitOfWeight)
             overallChangeCell.detailTextLabel?.text = String(format: "%.1f%%", overallChange)
         }
     }
