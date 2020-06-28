@@ -157,9 +157,10 @@ extension WeightViewController {
         guard let fetchedObjects = fetchedResultsController.fetchedObjects else { return }
         let weightChangeBetweenDays = calculateWeightChange(for: item, at: indexPath)
 
+        let unitOfWeight = AppDefaults().unitOfWeight
         cell.dateLabel.text = item.isDateToday() ? "Today" : item.createdAtString()
         cell.percentageLabel.textColor = weightChangeBetweenDays < 0.0 ? UIColor.systemRed : UIColor.systemGreen
-        cell.weightLabel.text = "Weight - \(item.formattedWeight())"
+        cell.weightLabel.text = "Weight - \(item.formatWeight(for: unitOfWeight))"
         cell.percentageLabel.text = String(format: "%.1f%%", weightChangeBetweenDays)
         cell.numberOfDaysLabel.text = "Day \(fetchedObjects.count - indexPath.row)"
     }
@@ -249,7 +250,9 @@ extension WeightViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let item = fetchedResultsController.object(at: indexPath)
                     let vc = segue.destination as! WeightDetailsViewController
-                    vc.weight = item.formattedWeight()
+
+                    let unitOfWeight = AppDefaults().unitOfWeight
+                    vc.weight = item.formatWeight(for: unitOfWeight)
                     vc.overallChange = calculateWeightChange(for: item, at: indexPath)
                     vc.date = item.createdAtString()
                     vc.managedObjectContext = managedObjectContext

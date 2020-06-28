@@ -22,7 +22,7 @@ class SettingsViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
 
-        let index = UserDefaults.standard.integer(forKey: kUnitOfWeightKey)
+        let index = AppDefaults().unitOfWeight.rawValue
         tableView.cellForRow(at: IndexPath(row: index, section: 0))?.accessoryType = .checkmark
     }
 }
@@ -31,7 +31,7 @@ extension SettingsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         resetCellsAccessoryType()
 
-        updateUnitOfWeight(to: indexPath.row == 0 ? .pounds : .kilograms)
+        AppDefaults().unitOfWeight = indexPath.row == 0 ? .pounds : .kilograms
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -44,11 +44,5 @@ private extension SettingsViewController {
                 cell.accessoryType = .none
             }
         }
-    }
-
-    func updateUnitOfWeight(to unit: UnitOfWeight) {
-        let defaults = UserDefaults.standard
-        defaults.set(unit.rawValue, forKey: kUnitOfWeightKey)
-        defaults.synchronize()
     }
 }
