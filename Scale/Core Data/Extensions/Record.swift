@@ -31,10 +31,8 @@ extension Record {
         return Calendar.current.isDateInToday(createdAt)
     }
 
-    func formattedWeight() -> String {
-        let defaults = UserDefaults.standard
-        let unitOfWeight = UnitOfWeight(rawValue: defaults.integer(forKey: kUnitOfWeightKey)) ?? UnitOfWeight.pounds
-        switch unitOfWeight {
+    func formatWeight(for unit: UnitOfWeight) -> String {
+        switch unit {
             case .pounds:
                 return String(format: "%.0flbs", weight)
             case .kilograms:
