@@ -31,11 +31,17 @@ extension WeightDetailsViewController {
     // MARK: - Setup methods
     
     private func setupCells() {
+        if let overallChange = overallChange {
+            overallChangeCell.detailTextLabel?.textColor = overallChange < 0.0 ? UIColor.systemRed : UIColor.systemGreen
+            updateWeightInformation()
+        }
+    }
+
+    func updateWeightInformation() {
         if let overallChange = overallChange,
             let record = record {
             let unitOfWeight = AppDefaults().unitOfWeight
 
-            overallChangeCell.detailTextLabel?.textColor = overallChange < 0.0 ? UIColor.systemRed : UIColor.systemGreen
             dateDescriptionCell.detailTextLabel?.text = record.createdAtString()
             weightDescriptionCell.detailTextLabel?.text = record.formatWeight(for: unitOfWeight)
             overallChangeCell.detailTextLabel?.text = String(format: "%.1f%%", overallChange)
