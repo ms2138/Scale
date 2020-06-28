@@ -250,11 +250,8 @@ extension WeightViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let item = fetchedResultsController.object(at: indexPath)
                     let vc = segue.destination as! WeightDetailsViewController
-
-                    let unitOfWeight = AppDefaults().unitOfWeight
-                    vc.weight = item.formatWeight(for: unitOfWeight)
+                    vc.record = item
                     vc.overallChange = calculateWeightChange(for: item, at: indexPath)
-                    vc.date = item.createdAtString()
                     vc.managedObjectContext = managedObjectContext
             }
             default:
