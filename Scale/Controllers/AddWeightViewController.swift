@@ -41,8 +41,8 @@ extension AddWeightViewController {
     }
 
     @IBAction func save(_ sender: UIBarButtonItem?) {
-        guard let input = Float(weightCell.textField.text!) else {
-            showAlert(title: "Error", message: "Please enter the required information")
+        guard let input = Float(weightCell.textField.text!), input > 0 else {
+            showAlert(title: "Error", message: "Please enter a correct weight")
             return
         }
 
