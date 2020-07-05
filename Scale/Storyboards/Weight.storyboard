@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
         </scene>
-        <!--Records-->
+        <!--Weight-->
         <scene sceneID="vqM-BB-Szc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oY9-JU-VJD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Records" id="wj0-Pr-AVP"/>
+                    <tabBarItem key="tabBarItem" title="Weight" image="weight" id="wj0-Pr-AVP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bit-ea-aLQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -108,4 +108,7 @@
             <point key="canvasLocation" x="2828.985507246377" y="258.48214285714283"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weight" width="30" height="30"/>
+    </resources>
 </document>
