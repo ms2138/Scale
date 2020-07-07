@@ -12,7 +12,7 @@ import CoreData
 class AddWeightViewController: UITableViewController {
     @IBOutlet weak var weightCell: TextInputCell!
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
-    var managedObjectContext: NSManagedObjectContext?
+    var dataManager: CoreDataManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +46,13 @@ extension AddWeightViewController {
             return
         }
 
-        guard let managedObjectContext = managedObjectContext else { return }
+        guard let dataManager = dataManager else { return }
 
-        let record = Record(context: managedObjectContext)
+        let record = Record(context: dataManager.managedObjectContext)
         record.weight = input
         record.createdAt = Date()
+
+        dataManager.saveContext()
 
         dismiss(animated: true)
     }

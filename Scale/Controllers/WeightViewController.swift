@@ -234,7 +234,7 @@ extension WeightViewController {
                 let navController = segue.destination as! UINavigationController
                 guard let viewController = navController.topViewController else { return }
                 let vc = viewController as! AddWeightViewController
-                vc.managedObjectContext = self.managedObjectContext
+                vc.dataManager = dataManager
             case "showEditDatePicker":
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let navController = segue.destination as! UINavigationController
