@@ -34,9 +34,9 @@ extension Record {
     func formatWeight(for unit: UnitOfWeight) -> String {
         switch unit {
             case .pounds:
-                return String(format: "%.0flbs", weight)
+                return String(format: "%.1flbs", weight)
             case .kilograms:
-                return String(format: "%.0fkg", weight)
+                return String(format: "%.2fkg", weight)
         }
     }
 }
