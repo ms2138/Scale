@@ -25,6 +25,15 @@ class WeightDetailsViewController: UITableViewController {
         setupCells()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let unit = AppDefaults().unitOfWeight.rawValue == 0 ? "lbs" : "kg"
+
+        if weightDescriptionCell.textLabel?.text?.contains(unit) != true {
+            updateWeightInformation()
+        }
+    }
 }
 
 extension WeightDetailsViewController {

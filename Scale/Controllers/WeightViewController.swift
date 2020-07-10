@@ -51,8 +51,40 @@ class WeightViewController: UIViewController, NoContentBackgroundView {
         fetch()
 
         setupNotifications()
+
+        UserDefaults.standard.addObserver(self, forKeyPath: "UnitOfWeight", options: .new, context: nil)
     }
 
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        Reload the rows if the user has changed the unit of weight
+//        
+//        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? WeightCell {
+//            let unit = AppDefaults().unitOfWeight.rawValue == 0 ? "lbs" : "kg"
+//
+//            if cell.weightLabel.text?.contains(unit) != true {
+//                if let indexPaths = tableView.indexPathsForVisibleRows {
+//                    tableView.reloadRows(at: indexPaths, with: .automatic)
+//                }
+//            }
+//        }
+//    }
+
+    deinit {
+        removeObserver(self, forKeyPath: "UnitOfWeight")
+    }
+}
+
+
+
+extension WeightViewController {
+    // MARK: Observer methods
+
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?,
+                               change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        calculateUnitOfWeight()
+    }
 }
 
 extension WeightViewController {
@@ -92,6 +124,32 @@ extension WeightViewController {
             try self.fetchedResultsController.performFetch()
         } catch {
             print("Failed to fetch items: \(error)")
+        }
+    }
+
+    private func calculateUnitOfWeight() {
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Record", in: managedObjectContext)
+        let batchUpdateRequest = NSBatchUpdateRequest(entity: entityDescription!)
+
+        batchUpdateRequest.resultType = .updatedObjectIDsResultType
+        let unit = AppDefaults().unitOfWeight
+        if unit == .pounds {
+            batchUpdateRequest.propertiesToUpdate = ["weight": NSExpression(format: "weight / 0.4535924", argumentArray: [])]
+        } else {
+            batchUpdateRequest.propertiesToUpdate = ["weight": NSExpression(format: "weight * 0.4535924", argumentArray: [])]
+        }
+
+        do {
+            let batchUpdateResult = try managedObjectContext.execute(batchUpdateRequest) as! NSBatchUpdateResult
+            let objectIDs = batchUpdateResult.result as! [NSManagedObjectID]
+
+            for objectID in objectIDs {
+                let managedObject = managedObjectContext.object(with: objectID)
+                managedObjectContext.refresh(managedObject, mergeChanges: false)
+            }
+            fetch()
+        } catch {
+            print("Failed to update items: \(error)")
         }
     }
 }
@@ -208,8 +266,9 @@ extension WeightViewController: NSFetchedResultsControllerDelegate {
             }
             case .update:
                 if let indexPath = indexPath {
-                    let cell = tableView.cellForRow(at: indexPath) as! WeightCell
-                    configureCell(cell, at: indexPath)
+                    if let cell = tableView.cellForRow(at: indexPath) as? WeightCell {
+                        configureCell(cell, at: indexPath)
+                    }
             }
             case .move:
                 if let indexPath = indexPath {
