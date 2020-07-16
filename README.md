@@ -12,4 +12,5 @@ To run the project:
 * Open Scale.xcworkspace
 * Build and run in Xcode
 
-
+# License
+This project is licensed under the MIT License.
