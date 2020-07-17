@@ -40,7 +40,6 @@ private extension GraphViewController {
         graph.paddingTop = 30.0
         graph.paddingRight = 40.0
         graph.titlePlotAreaFrameAnchor = .top
-        graph.backgroundColor = UIColor.black.cgColor
         graph.titleDisplacement = CGPoint(x: 0.0, y: 30.0)
 
         hostView.hostedGraph = graph
@@ -51,10 +50,10 @@ private extension GraphViewController {
         lineStyle.lineJoin = .round
         lineStyle.lineCap = .round
         lineStyle.lineWidth = 2.5
-        lineStyle.lineColor = CPTColor.white()
+        lineStyle.lineColor = CPTColor.black()
 
         let plotSymbol = CPTPlotSymbol.ellipse()
-        plotSymbol.fill = CPTFill(color: CPTColor.white())
+        plotSymbol.fill = CPTFill(color: CPTColor.black())
         plotSymbol.lineStyle = lineStyle
         plotSymbol.size = CGSize(width: 6.0, height: 6.0)
 
@@ -73,19 +72,19 @@ private extension GraphViewController {
         let axisSet = graph.axisSet as! CPTXYAxisSet
 
         let titleStyle = CPTMutableTextStyle()
-        titleStyle.color = CPTColor.white()
+        titleStyle.color = CPTColor.black()
         titleStyle.fontName = "HelveticaNeue-Bold"
         titleStyle.fontSize = 10.0
         titleStyle.textAlignment = .center
 
         let textStyle = CPTMutableTextStyle()
-        textStyle.color = CPTColor.white()
+        textStyle.color = CPTColor.black()
         textStyle.fontName = "HelveticaNeue-Bold"
         textStyle.fontSize = 10.0
         textStyle.textAlignment = .center
 
         let lineStyle = CPTMutableLineStyle()
-        lineStyle.lineColor = CPTColor.white()
+        lineStyle.lineColor = CPTColor.black()
         lineStyle.lineWidth = 5
 
         let gridLineStyle = CPTMutableLineStyle()
@@ -109,8 +108,8 @@ private extension GraphViewController {
             y.majorIntervalLength   = 5
             y.minorTicksPerInterval = 2
             y.labelTextStyle = textStyle
-            y.alternatingBandFills = [CPTFill(color: CPTColor.init(componentRed: 240.0, green: 240.0, blue: 240.0, alpha: 0.05)),
-                                      CPTFill(color: CPTColor.black())]
+            y.alternatingBandFills = [CPTFill(color: CPTColor.init(componentRed: 237.0/255.0, green: 237.0/255.0, blue: 237.0/255.0, alpha: 1.0)),
+                                      CPTFill(color: CPTColor.init(componentRed: 249.0/255.0, green: 249.0/255.0, blue: 249.0/255.0, alpha: 1.0))]
             y.axisLineStyle = lineStyle
             y.axisConstraints = CPTConstraints(lowerOffset: 0.0)
         }
